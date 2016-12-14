@@ -9,20 +9,28 @@ TODO: Delete this and the text above, and describe your gem
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'operationcode-airtable'
+gem 'operationcode-airtable', git: 'https://github.com/OperationCode/operationcode-airtable'
 ```
 
 And then execute:
 
     $ bundle
 
-Or install it yourself as:
-
-    $ gem install operationcode-airtable
-
 ## Usage
 
-TODO: Write usage instructions here
+* Require the gem in your application like so:
+```ruby
+require 'operationcode/airtable'
+```
+* Set the AIRTABLE_API_KEY environment variable.
+* Retreive your base_id and table name from the airtable API documentation
+* Instantiate a new object with these values. For example:
+```ruby
+2.3.0 :001 > a = Operationcode::Airtable.new(base_id:  'YOUR-BASE-ID', table: 'YOUR-TABLE-NAME')
+```
+* You can now interact with the airtables API.
+
+Currently only #all and #create is supported. Please file a ticket (or a PR) if you need more functionality.
 
 ## Development
 
