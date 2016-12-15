@@ -38,5 +38,11 @@ module Operationcode
       record = ::Airtable::Record.new(record)
       @table.create record
     end
+
+    def find_by(params)
+      raise ArgumentError unless params.kind_of? Hash
+      column, value = params.first
+      @table.select(limit: 1, formula: "#{column} = #{value}")
+    end
   end
 end
