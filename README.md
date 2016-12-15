@@ -2,7 +2,7 @@
 
 Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/operationcode/airtable`. To experiment with that code, run `bin/console` for an interactive prompt.
 
-TODO: Delete this and the text above, and describe your gem
+TODO: Delete this and the text above, and describe your gem.
 
 ## Installation
 
@@ -23,7 +23,7 @@ And then execute:
 require 'operationcode/airtable'
 ```
 * Set the AIRTABLE_API_KEY environment variable.
-* Retreive your base_id and table name from the airtable API documentation
+* Retrieve your base_id and table name from the airtable API documentation.
 * Instantiate a new object with these values. For example:
 ```ruby
 2.3.0 :001 > a = Operationcode::Airtable.new(base_id:  'YOUR-BASE-ID', table: 'YOUR-TABLE-NAME')
@@ -45,5 +45,5 @@ Bug reports and pull requests are welcome on GitHub at https://github.com/[USERN
 
 ## License
 
-The gem is available as open source under the terms of the [MIT License](http://opensource.org/licenses/MIT).
+The gem is available as an open source under the terms of the [MIT License](http://opensource.org/licenses/MIT).
 
