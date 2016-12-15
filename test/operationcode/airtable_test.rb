@@ -25,12 +25,17 @@ class Operationcode::AirtableTest < Minitest::Test
   end
 
   def test_it_lists_records
-    ::Airtable::Table.any_instance.expects(:records)
+    ::Airtable::Table.any_instance.expects(:all)
     Operationcode::Airtable.new(@airtable_opts).all
   end
 
   def test_it_creates_records
     ::Airtable::Table.any_instance.expects(:create)
     Operationcode::Airtable.new(@airtable_opts).create({ col1: 'value 1', col2: 'value 2' })
+  end
+
+  def test_it_can_find_a_record_by_a_key
+    ::Airtable::Table.any_instance.expects(:select).with(limit: 1, formula: 'col1 = col1_value').returns(::Airtable::Record.new(col1: 'col1_value', col2: 'col2_value', col3: 'col3_value'))
+    Operationcode::Airtable.new(@airtable_opts).find_by(col1: 'col1_value')
   end
 end

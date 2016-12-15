@@ -25,9 +25,7 @@ module Operationcode
     # Lists all records in the table
     # @return [Array]
     def all
-      # FIXME this will only return the first 100 records
-      # We should iterate until we actually retreive all records
-      @table.records
+      @table.all
     end
 
     # Creates a record in airtables
@@ -37,6 +35,12 @@ module Operationcode
     def create(record)
       record = ::Airtable::Record.new(record)
       @table.create record
+    end
+
+    def find_by(params)
+      raise ArgumentError unless params.kind_of? Hash
+      column, value = params.first
+      @table.select(limit: 1, formula: "#{column} = #{value}")
     end
   end
 end
