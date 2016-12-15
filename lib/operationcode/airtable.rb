@@ -25,9 +25,7 @@ module Operationcode
     # Lists all records in the table
     # @return [Array]
     def all
-      # FIXME this will only return the first 100 records
-      # We should iterate until we actually retreive all records
-      @table.records
+      @table.all
     end
 
     # Creates a record in airtables

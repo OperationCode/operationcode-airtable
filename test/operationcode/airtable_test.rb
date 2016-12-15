@@ -25,7 +25,7 @@ class Operationcode::AirtableTest < Minitest::Test
   end
 
   def test_it_lists_records
-    ::Airtable::Table.any_instance.expects(:records)
+    ::Airtable::Table.any_instance.expects(:all)
     Operationcode::Airtable.new(@airtable_opts).all
   end
 
