@@ -40,7 +40,8 @@ module Operationcode
     def find_by(params)
       raise ArgumentError unless params.kind_of? Hash
       column, value = params.first
-      @table.select(limit: 1, formula: "#{column} = \"#{value}\"")
+      result = @table.select(limit: 1, formula: "#{column} = \"#{value}\"")
+      result == [] ? nil : result
     end
   end
 end
