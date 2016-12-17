@@ -1,6 +1,10 @@
 # Operationcode::Airtable
 
-This gem provides a common interface to airtables for the Operation Code platform
+[![Build Status](https://travis-ci.org/OperationCode/operationcode-airtable.svg?branch=master)](https://travis-ci.org/OperationCode/operationcode-airtable)
+[![Code Climate](https://codeclimate.com/github/OperationCode/operationcode-airtable/badges/a.svg)](https://codeclimate.com/github/OperationCode/operationcode-airtable)
+[![Test Coverage](https://codeclimate.com/github/OperationCode/operationcode-airtable/badges/coverage.svg)](https://codeclimate.com/github/OperationCode/operationcode-airtable/coverage)
+
+This gem provides a common interface to airtables for the Operation Code platform.
 
 ## Installation
 
