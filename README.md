@@ -1,5 +1,7 @@
 # Operationcode::Airtable
 
+[![Build Status](https://travis-ci.org/OperationCode/operationcode-airtable.svg?branch=master)](https://travis-ci.org/OperationCode/operationcode-airtable)
+
 This gem provides a common interface to airtables for the Operation Code platform.
 
 ## Installation
