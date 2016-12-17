@@ -25,7 +25,7 @@ And then execute:
 require 'operationcode/airtable'
 ```
 * Set the AIRTABLE_API_KEY environment variable.
-* Retreive your base_id and table name from the airtable API documentation
+* Retrieve your base_id and table name from the airtable API documentation.
 * Instantiate a new object with these values. For example:
 ```ruby
 2.3.0 :001 > a = Operationcode::Airtable.new(base_id:  'YOUR-BASE-ID', table: 'YOUR-TABLE-NAME')
